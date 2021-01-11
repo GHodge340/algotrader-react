@@ -1,15 +1,19 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Main from './components/MainComponent';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      <img src="./logo-white.png" width="150" alt="Test" />
-      <p>App Under Development</p>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="page">
+          <Main/>
+        </div>
+      </BrowserRouter>
+    );
+  }  
 }
 
 export default App;
